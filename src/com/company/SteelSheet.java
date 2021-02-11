@@ -1,15 +1,15 @@
 package com.company;
 
-public class SteelSheet {
-    float width;
-    float height;
-    float length = 6;
-    float weight;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public SteelSheet(float width, float height, float length, float weight) {
-        this.width = width;
-        this.height = height;
-        this.length = length;
-        this.weight = weight;
-    }
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class SteelSheet {
+    private Float width;
+    private Float height;
+    private Float length;
+    private Float mass;
 }
