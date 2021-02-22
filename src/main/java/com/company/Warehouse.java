@@ -26,8 +26,10 @@ public class Warehouse {
         if (availability < nr) {
             String answer = String.format("Not enough sheets from this model, %d available!\n", availability);
             System.out.println(answer);
+            return;
         }
         availableSheets.put(sheet, (availability - nr));
-        System.out.format("%d sheets were exported\n", nr);
+        System.out.format("%d sheet/s was/were exported\n", nr);
     }
+
 }
