@@ -22,6 +22,6 @@ public class WareHouseTest {
         SheetDistribution sheetDistribution = new SheetDistribution();
         List<Sheet> result = sheetDistribution.processList(availableSheets, 1000.0);
         result.forEach(System.out::println);
-        System.out.println("Total: " + result.stream().map(Sheet::getTotal).reduce(0.0, Double::sum));
+        System.out.println("Total: " + result.stream().map(x -> x.getMass()*x.getCount()).reduce(0.0, Double::sum));
     }
 }
